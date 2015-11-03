@@ -23,3 +23,9 @@ git clone https://github.com/VundleVim/Vundle.vim.git $HOME/.vim/bundle/Vundle.v
 
 echo "Installing vim plugins"
 vim +PluginInstall +qall
+
+
+# oh-my-zsh
+sudo apt-get install zsh -y
+wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh
+chsh -s $(which zsh)

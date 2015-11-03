@@ -1,0 +1,12 @@
+[user]
+	name = Charlie Strawn
+	email = cdstrawn@gmail.com
+[push]
+	default = simple
+[color]
+	ui = auto
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false
+
