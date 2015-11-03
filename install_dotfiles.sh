@@ -1,7 +1,5 @@
-hash git 2> /dev/null || {
-  echo "Installing dotfiles requires git"
-  exit
-}
+
+sudo apt-get install vim -y
 
 mkdir -p $HOME/tmp
 mkdir -p $HOME/tmp/vim
@@ -20,3 +18,8 @@ for file in $files; do
 done
 
 source $HOME/.bashrc
+
+git clone https://github.com/VundleVim/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
+
+echo "Installing vim plugins"
+vim +PluginInstall +qall
