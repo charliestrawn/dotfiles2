@@ -1,4 +1,7 @@
 
+
+git submodule update --recursive
+
 sudo apt-get install vim -y
 
 mkdir -p $HOME/tmp
@@ -26,6 +29,11 @@ vim +PluginInstall +qall
 
 
 # oh-my-zsh
-sudo apt-get install zsh -y
-wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh
-chsh -s $(which zsh)
+if [ $(echo $SHELL) -eq /bin/bash ]
+then
+	sudo apt-get install zsh -y
+	wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh
+	chsh -s $(which zsh)
+fi
+
+source $(pwd)/antigen/antigen.zsh
