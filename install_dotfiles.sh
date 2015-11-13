@@ -1,6 +1,7 @@
-
+echo "Installing dotfiles..."
 
 git submodule update --recursive
+cp antigen/antigen.zsh $HOME/antigen.zsh
 
 sudo apt-get install vim -y
 

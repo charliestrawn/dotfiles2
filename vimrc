@@ -11,7 +11,11 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
 Plugin 'majutsushi/tagbar'
 
+Plugin 'flazz/vim-colorschemes'
+Plugin 'smyck'
+
 call vundle#end()
+
 filetype plugin indent on
 
 imap jj <Esc>
@@ -29,4 +33,14 @@ set showcmd
 
 set tabstop=4
 
-nmap <F8> :TagbarToggle<CR>
+" Tagbar
+nmap <leader>t :TagbarToggle<CR>
+
+" NERD Tree
+map <leader>n :NERDTreeToggle<CR>
+let NERDTreeIgnore = ['\.pyc$']
+let NERDTreeWinSize = 22
+let NERDTreeMinimalUI = 1
+
+
+colorscheme smyck

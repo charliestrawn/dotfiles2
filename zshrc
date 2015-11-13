@@ -1,20 +1,18 @@
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/charliestrawn/.oh-my-zsh
 
-ZSH_THEME="fino"
+source $HOME/antigen.zsh
 
-plugins=(git)
+antigen use oh-my-zsh
+
+antigen theme fino
+
+antigen bundle git
+antigen bundle zsh-users/zsh-syntax-highlighting
+
+antigen apply
 
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 
-source $ZSH/oh-my-zsh.sh
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
