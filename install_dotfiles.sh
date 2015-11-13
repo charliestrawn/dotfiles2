@@ -38,3 +38,6 @@ then
 fi
 
 source $(pwd)/antigen/antigen.zsh
+
+
+sudo apt-get install tig -y
